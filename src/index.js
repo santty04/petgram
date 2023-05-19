@@ -4,7 +4,12 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { App } from './App'
 
 const client = new ApolloClient({
-  iro
+  uri: 'https://petgram-backend-one.now.sh/graphql',
+  cache: new InMemoryCache()
 })
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>, document.getElementById('app')
+)
