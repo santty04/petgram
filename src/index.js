@@ -1,4 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { App } from './App'
 
-ReactDOM.render(<h1>Deployed!</h1>, document.getElementById('app'))
+const client = new ApolloClient({
+  iro
+})
+
+ReactDOM.render(<App />, document.getElementById('app'))
